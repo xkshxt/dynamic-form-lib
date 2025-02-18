@@ -8,7 +8,7 @@
   ],
   "engines": {
       "node": ">=14.0.0"
-    },
+  },
   "scripts": {
     "build": "tsc",
     "test": "jest",
@@ -23,6 +23,14 @@
     "name": "Akshat Jain",
     "email": "akshj0203@gmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xkshxt/dynamic-form-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xkshxt/dynamic-form-lib/issues"
+  },
+  "homepage": "https://github.com/xkshxt/dynamic-form-lib#readme",
   "license": "MIT",
   "description": "A dynamic form library for React Native applications",
   "keywords": ["react-native", "form", "dynamic", "react-hook-form", "zod"],
