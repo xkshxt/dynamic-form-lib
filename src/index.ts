@@ -1,2 +1,2 @@
-export { default as FormButtonComponent } from './FormButtonComponent';
+export { default as Button } from './Button';
 export { default as DynamicForm } from './DynamicForm';

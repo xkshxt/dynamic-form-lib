@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import FormButtonComponent from '../FormButtonComponent';
+import Button from '../Button';
 
 
-describe('FormButtonComponent', () => {
+describe('Button', () => {
   const defaultProps = {
     onSubmitButtonPress: jest.fn(),
     buttonTitle: 'Submit',
@@ -12,7 +12,7 @@ describe('FormButtonComponent', () => {
   };
 
   it('renders submit and cancel buttons with correct titles', () => {
-    const { getByText } = render(<FormButtonComponent {...defaultProps} />);
+    const { getByText } = render(<Button {...defaultProps} />);
     
     expect(getByText('Submit')).toBeTruthy();
     expect(getByText('Cancel')).toBeTruthy();
@@ -21,7 +21,7 @@ describe('FormButtonComponent', () => {
   it('calls onSubmitButtonPress when submit button is pressed', () => {
     const onSubmitButtonPress = jest.fn();
     const { getByText } = render(
-      <FormButtonComponent {...defaultProps} onSubmitButtonPress={onSubmitButtonPress} />
+      <Button {...defaultProps} onSubmitButtonPress={onSubmitButtonPress} />
     );
 
     fireEvent.press(getByText('Submit'));
@@ -31,7 +31,7 @@ describe('FormButtonComponent', () => {
   it('calls onCancel when cancel button is pressed', () => {
     const onCancel = jest.fn();
     const { getByText } = render(
-      <FormButtonComponent {...defaultProps} onCancel={onCancel} />
+      <Button {...defaultProps} onCancel={onCancel} />
     );
 
     fireEvent.press(getByText('Cancel'));

@@ -17,7 +17,7 @@ import {
   ViewStyle,
   TextStyle,
 } from 'react-native';
-import FormButtonComponent from './FormButtonComponent';
+import Button from './Button';
 
 /** Custom style interface */
 export interface CustomStyles {
@@ -105,7 +105,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
       </ScrollView>
 
       {/* Render form buttons */}
-      <FormButtonComponent
+      <Button
         onSubmitButtonPress={handleSubmit(onSubmitHandler)}
         buttonTitle={buttonTitle}
         cancelTitle={cancelTitle}

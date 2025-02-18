@@ -1,5 +1,5 @@
 /**
- * FormButtonComponent
+ * Button
  *
  * This component renders two buttons:
  * one for submitting the form and one for canceling the form action.
@@ -17,8 +17,8 @@ export interface CustomButtonStyles {
   labelText?: TextStyle;
 }
 
-/** Props for the FormButtonComponent */
-export interface FormButtonComponentProps {
+/** Props for the Button */
+export interface ButtonProps {
   /** Callback for when the Submit button is pressed */
   onSubmitButtonPress: () => void;
   /** Text for the Submit button */
@@ -41,7 +41,7 @@ const COLORS = {
   borderGrey: '#cccccc',
 };
 
-const FormButtonComponent: React.FC<FormButtonComponentProps> = ({
+const Button: React.FC<ButtonProps> = ({
   onSubmitButtonPress,
   buttonTitle,
   cancelTitle,
@@ -84,7 +84,7 @@ const FormButtonComponent: React.FC<FormButtonComponentProps> = ({
   );
 };
 
-export default FormButtonComponent;
+export default Button;
 
 // Define default styles for the buttons.
 const styles = StyleSheet.create({
