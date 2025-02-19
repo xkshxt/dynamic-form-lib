@@ -53,6 +53,7 @@ const Button: React.FC<ButtonProps> = ({
     <View style={[styles.container, customButtonStyles.container || {}]}>
       {/* Cancel Button */}
       <Pressable
+        testID="cancel-button"
         onPress={onCancel}
         style={({ pressed }) => [
           styles.cancelButton,
@@ -67,6 +68,7 @@ const Button: React.FC<ButtonProps> = ({
 
       {/* Submit Button */}
       <Pressable
+        testID="submit-button"
         onPress={onSubmitButtonPress}
         style={({ pressed }) => [
           styles.submitButton,
